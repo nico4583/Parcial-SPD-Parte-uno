@@ -9,8 +9,8 @@
 #define SUBE 4
 #define BAJA 3
 #define RESET 2
-#define UNIDAD A5
-#define DECENA A4
+#define UNIDAD A4
+#define DECENA A5
 #define APAGADO 0
 #define TIMEDISPLAYON 10
 
@@ -106,12 +106,12 @@ void printDigit(int number) {
 
   digitalWrite(UNIDAD, LOW);
   digitalWrite(DECENA, HIGH);
-  display(unidad);  // Muestra la unidad en el display
+  display(decena);  // Muestra la unidad en el display
   delay(10);
 
   digitalWrite(UNIDAD, HIGH);
   digitalWrite(DECENA, LOW);
-  display(decena);  // Muestra la decena en el display
+  display(unidad); // Muestra la decena en el display
 }
 
 
