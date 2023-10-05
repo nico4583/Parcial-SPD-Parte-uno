@@ -44,12 +44,12 @@ void setup() {
 void loop() {
   // Detección de botones y actualización del número a mostrar en el display
   int pressed = keypressed();
+  printDigit(countDigit);  // Muestra el nuevo número en el display
   if (pressed == SUBE) {
     countDigit++;
     if (countDigit > 99) {
       countDigit = 0;
     }
-    printDigit(countDigit);  // Muestra el nuevo número en el display
     delay(TIMEDISPLAYON);    // Espera un tiempo para mostrar el número
   }
 
@@ -58,13 +58,11 @@ void loop() {
     if (countDigit < 0) {
       countDigit = 99;
     }
-    printDigit(countDigit);  // Muestra el nuevo número en el display
     delay(TIMEDISPLAYON);    // Espera un tiempo para mostrar el número
   }
 
   if (pressed == RESET) {
     countDigit = 0;
-    printDigit(countDigit);  // Muestra el nuevo número en el display
     delay(TIMEDISPLAYON);    // Espera un tiempo para mostrar el número
   }
 }
@@ -105,13 +103,16 @@ void printDigit(int number) {
   int unidad = number % 10;
 
   digitalWrite(UNIDAD, LOW);
+  digitalWrite(DECENA, LOW);
+  display(decena);// Muestra la unidad en el display
   digitalWrite(DECENA, HIGH);
-  display(decena);  // Muestra la unidad en el display
   delay(10);
 
-  digitalWrite(UNIDAD, HIGH);
+  digitalWrite(UNIDAD, LOW);
   digitalWrite(DECENA, LOW);
-  display(unidad); // Muestra la decena en el display
+  display(unidad);// Muestra la decena en el display
+  digitalWrite(UNIDAD, HIGH);
+  delay(10);
 }
 
 
