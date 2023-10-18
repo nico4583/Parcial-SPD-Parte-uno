@@ -3,9 +3,10 @@
 - Ferreyra Nicolás
 - Forlino Lucas
 - Altamirano Kiara
-# Link
+# Link https://github.com/Fenrique1995/Parcial-SPD-Parte-uno/tree/main
 # Proyecto: Contador Display 7 Segmentos con Multiplexación
 ![Tinkercad](./imágen/circuito.png)
+![Tinkercad](./imágen/circuito02.png)
 # Descripción
 # Función principal
 # Diagrama de circuito
