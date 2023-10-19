@@ -7,6 +7,7 @@
 # Proyecto: Contador Display 7 Segmentos con Multiplexación
 ![Tinkercad](./imágen/circuito.png)
 ![Tinkercad](./imágen/circuito02.png)
+![Tinkercad](./imágen/circuito03.png)
 # Descripción
 # Función principal
 # Diagrama de circuito
